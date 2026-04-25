@@ -25,10 +25,9 @@ export function Services() {
                 <article className="glass-card group p-7 md:p-8 h-full">
                   <div className="flex items-start gap-5">
                     <div className="relative shrink-0">
-                      <div className="h-14 w-14 rounded-2xl bg-gradient-primary grid place-items-center shadow-glow group-hover:scale-110 transition-transform duration-500">
-                        <Icon className="h-6 w-6 text-primary-foreground" />
+                      <div className="h-12 w-12 rounded-xl bg-primary/15 ring-1 ring-primary/40 grid place-items-center group-hover:bg-primary/25 transition-colors">
+                        <Icon className="h-5 w-5 text-primary" />
                       </div>
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-primary opacity-0 group-hover:opacity-50 blur-xl transition-opacity" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-gradient transition-all">{s.title}</h3>

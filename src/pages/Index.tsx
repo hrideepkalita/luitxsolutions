@@ -12,6 +12,7 @@ import { Contact } from "@/components/site/Contact";
 import { CtaSection } from "@/components/site/CtaSection";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { MobileStickyCta } from "@/components/site/MobileStickyCta";
 
 const Index = () => {
   useEffect(() => {
@@ -78,6 +79,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppFab />
+      <MobileStickyCta />
     </LanguageProvider>
   );
 };
