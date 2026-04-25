@@ -29,7 +29,7 @@ export const translations = {
       title: "About LuitX",
       body: "LuitX is a modern digital solutions agency helping businesses build a strong online presence. From website development to automation and growth strategies, we deliver results that matter.",
     },
-    owner: { caption: "Driven by passion, powered by innovation." },
+    owner: { caption: "Made by IITian for Assam ❤️" },
     features: {
       title: "Why Choose LuitX",
       items: [
@@ -88,7 +88,7 @@ export const translations = {
       title: "LuitX के बारे में",
       body: "LuitX एक आधुनिक डिजिटल समाधान एजेंसी है जो व्यवसायों को मजबूत ऑनलाइन उपस्थिति बनाने में मदद करती है।",
     },
-    owner: { caption: "जुनून से प्रेरित, नवाचार से संचालित।" },
+    owner: { caption: "Made by IITian for Assam ❤️" },
     features: {
       title: "LuitX क्यों चुनें",
       items: [
@@ -147,7 +147,7 @@ export const translations = {
       title: "LuitX ৰ বিষয়ে",
       body: "LuitX এটা আধুনিক ডিজিটেল সমাধান এজেন্সী যিয়ে ব্যৱসায়সমূহক শক্তিশালী অনলাইন উপস্থিতি গঢ়াত সহায় কৰে।",
     },
-    owner: { caption: "আবেগেৰে চালিত, উদ্ভাৱনেৰে শক্তিশালী।" },
+    owner: { caption: "Made by IITian for Assam ❤️" },
     features: {
       title: "কিয় LuitX বাছনি কৰিব",
       items: [

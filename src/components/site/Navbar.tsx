@@ -39,11 +39,10 @@ export function Navbar() {
           }`}
         >
           <a href="#top" className="flex items-center gap-2.5 group">
-            <span className="relative h-10 w-10 rounded-xl overflow-hidden ring-1 ring-primary/40 shadow-glow">
-              <img src={logo} alt="LuitX logo" className="h-full w-full object-cover scale-[1.6]" />
-              <span className="absolute inset-0 rounded-xl bg-gradient-primary opacity-0 group-hover:opacity-30 blur-md transition-opacity" />
+            <span className="relative h-11 w-11 rounded-xl grid place-items-center bg-background/60 ring-1 ring-primary/40 shadow-[0_0_18px_hsl(var(--primary)/0.35)] p-1.5 transition-transform duration-300 group-hover:scale-105">
+              <img src={logo} alt="LuitX logo" className="h-full w-full object-contain" loading="eager" />
             </span>
-            <span className="font-bold text-lg tracking-tight text-gradient">LUITX</span>
+            <span className="font-display font-bold text-lg tracking-tight text-gradient">LUITX</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">

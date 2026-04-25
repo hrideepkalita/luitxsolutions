@@ -10,11 +10,13 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full grid place-items-center bg-[#25D366] text-white shadow-[0_0_30px_rgba(37,211,102,0.6)] hover:scale-110 transition-transform animate-pulse-glow"
-      style={{ animation: "pulse-glow 2.5s ease-in-out infinite" }}
+      className="fixed bottom-24 md:bottom-6 right-5 z-50 h-14 w-14 rounded-full grid place-items-center bg-[#25D366] text-white shadow-[0_6px_20px_rgba(37,211,102,0.45)] transition-transform duration-200 hover:scale-110 wa-pulse"
     >
       <MessageCircle className="h-6 w-6" />
-      <span className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-green-300 animate-ping" />
+      <style>{`
+        @keyframes wa-pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55);} 70% { box-shadow: 0 0 0 14px rgba(37,211,102,0);} 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0);} }
+        .wa-pulse { animation: wa-pulse-ring 2.4s ease-out infinite; }
+      `}</style>
     </a>
   );
 }
