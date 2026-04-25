@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,11 +8,11 @@
 
 @layer base {
   :root {
-    /* Dark futuristic palette (default) */
-    --background: 222 47% 5%;
+    /* Dark futuristic palette — deeper (#050816 / #0a0f2c) */
+    --background: 230 70% 4%;
     --foreground: 210 40% 98%;
 
-    --card: 222 45% 8%;
+    --card: 228 55% 8%;
     --card-foreground: 210 40% 98%;
 
     --popover: 222 47% 6%;
@@ -46,9 +46,9 @@
     --brand-deep: 222 70% 8%;
 
     /* Gradients */
-    --gradient-hero: radial-gradient(ellipse at 20% 0%, hsl(205 100% 50% / 0.25), transparent 60%),
-                     radial-gradient(ellipse at 80% 30%, hsl(190 100% 55% / 0.18), transparent 60%),
-                     linear-gradient(180deg, hsl(222 60% 6%), hsl(222 70% 4%));
+    --gradient-hero: radial-gradient(ellipse at 25% 10%, hsl(220 90% 30% / 0.22), transparent 55%),
+                     radial-gradient(ellipse at 80% 40%, hsl(200 100% 45% / 0.12), transparent 55%),
+                     linear-gradient(180deg, #0a0f2c, #050816);
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-border: linear-gradient(135deg, hsl(205 100% 60% / 0.6), hsl(190 100% 65% / 0.2), hsl(205 100% 60% / 0.6));
     --gradient-text: linear-gradient(135deg, hsl(210 40% 98%), hsl(195 100% 75%));
@@ -85,14 +85,17 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     background: var(--gradient-hero);
     background-attachment: fixed;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: -0.02em;
+    font-weight: 700;
   }
   code, .font-mono {
     font-family: 'JetBrains Mono', monospace;
@@ -110,9 +113,10 @@
 @layer components {
   .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
+    will-change: transform;
   }
 
   .glass-card {
