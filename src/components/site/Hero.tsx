@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Rocket, MessageCircle, Sparkles } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import logo from "@/assets/luitx-logo.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/918822821202?text=Hello%20LuitX%20Solutions%20%F0%9F%91%8B%F0%9F%8F%BB%20I%20need%20a%20website";
@@ -98,12 +99,13 @@ function HeroVisual() {
       <div className="absolute inset-12 rounded-full border border-primary/10 animate-spin-slow" />
 
       {/* Center logo orb */}
-      <div className="absolute inset-1/4 rounded-full glass grid place-items-center animate-pulse-glow">
+      <div className="absolute inset-[18%] rounded-full glass grid place-items-center animate-pulse-glow overflow-hidden">
         <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 blur-2xl" />
-        <div className="relative text-center">
-          <div className="text-5xl font-bold text-gradient-brand">L</div>
-          <div className="text-xs font-mono text-muted-foreground tracking-widest mt-1">LUITX</div>
-        </div>
+        <img
+          src={logo}
+          alt="LuitX — Build. Automate. Grow."
+          className="relative w-[88%] h-[88%] object-cover rounded-full"
+        />
       </div>
 
       {/* Floating tech tags */}

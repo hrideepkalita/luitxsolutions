@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage, LANG_LABELS } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
+import logo from "@/assets/luitx-logo.jpg";
 
 const NAV_IDS = ["services", "about", "features", "contact"] as const;
 
@@ -37,10 +38,10 @@ export function Navbar() {
             scrolled ? "shadow-glow" : ""
           }`}
         >
-          <a href="#top" className="flex items-center gap-2 group">
-            <span className="relative grid place-items-center h-9 w-9 rounded-xl bg-gradient-primary shadow-glow">
-              <span className="font-bold text-primary-foreground text-sm">L</span>
-              <span className="absolute inset-0 rounded-xl bg-gradient-primary opacity-0 group-hover:opacity-100 blur-md transition-opacity" />
+          <a href="#top" className="flex items-center gap-2.5 group">
+            <span className="relative h-10 w-10 rounded-xl overflow-hidden ring-1 ring-primary/40 shadow-glow">
+              <img src={logo} alt="LuitX logo" className="h-full w-full object-cover scale-[1.6]" />
+              <span className="absolute inset-0 rounded-xl bg-gradient-primary opacity-0 group-hover:opacity-30 blur-md transition-opacity" />
             </span>
             <span className="font-bold text-lg tracking-tight text-gradient">LUITX</span>
           </a>

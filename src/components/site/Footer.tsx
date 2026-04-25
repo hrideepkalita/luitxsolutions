@@ -1,5 +1,6 @@
 import { Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import logo from "@/assets/luitx-logo.jpg";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -14,9 +15,9 @@ export function Footer() {
       <div className="container py-14">
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="grid place-items-center h-9 w-9 rounded-xl bg-gradient-primary shadow-glow">
-                <span className="font-bold text-primary-foreground">L</span>
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="relative h-10 w-10 rounded-xl overflow-hidden ring-1 ring-primary/40 shadow-glow">
+                <img src={logo} alt="LuitX logo" className="h-full w-full object-cover scale-[1.6]" />
               </span>
               <span className="font-bold text-lg text-gradient">LUITX</span>
             </div>
