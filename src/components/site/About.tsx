@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Reveal } from "./Reveal";
+import logo from "@/assets/luitx-logo.jpg";
 
 export function About() {
   const { t } = useLanguage();
@@ -44,10 +45,11 @@ function OwnerMonogram({ caption }: { caption: string }) {
         <div className="absolute inset-4 rounded-full border border-primary-glow/30 animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "25s" }} />
         <div className="absolute inset-10 rounded-full glass glow-ring grid place-items-center overflow-hidden">
           <div className="absolute inset-0 bg-gradient-primary opacity-10" />
-          <div className="relative text-center">
-            <div className="text-7xl font-bold text-gradient-brand">LX</div>
-            <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground mt-2">FOUNDER</div>
-          </div>
+          <img
+            src={logo}
+            alt="LuitX brand mark"
+            className="relative w-full h-full object-cover"
+          />
         </div>
       </div>
       <p className="mt-8 italic text-center text-muted-foreground max-w-xs">"{caption}"</p>
