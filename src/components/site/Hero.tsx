@@ -93,36 +93,31 @@ export function Hero() {
 function HeroVisual() {
   return (
     <div className="relative aspect-square max-w-md mx-auto">
-      {/* Rotating glow rings */}
-      <div className="absolute inset-0 rounded-full border border-primary/30 animate-spin-slow" />
-      <div className="absolute inset-6 rounded-full border border-primary-glow/20 animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
-      <div className="absolute inset-12 rounded-full border border-primary/10 animate-spin-slow" />
+      {/* Single soft glow ring */}
+      <div className="absolute inset-0 rounded-3xl border border-primary/30" />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-primary opacity-10 blur-2xl" />
 
-      {/* Center logo orb */}
-      <div className="absolute inset-[18%] rounded-full glass grid place-items-center animate-pulse-glow overflow-hidden">
-        <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 blur-2xl" />
+      {/* Logo card */}
+      <div className="absolute inset-[10%] rounded-3xl glass grid place-items-center p-8 shadow-glow">
         <img
           src={logo}
           alt="LuitX — Build. Automate. Grow."
-          className="relative w-[88%] h-[88%] object-cover rounded-full"
+          loading="eager"
+          decoding="async"
+          className="w-full h-full object-contain"
         />
       </div>
 
-      {/* Floating tech tags */}
-      <FloatingTag className="top-2 left-4" delay={0}>{"<html>"}</FloatingTag>
-      <FloatingTag className="top-12 right-0" delay={0.5}>{"{ css }"}</FloatingTag>
-      <FloatingTag className="bottom-12 left-0" delay={1}>{"() => js"}</FloatingTag>
-      <FloatingTag className="bottom-2 right-8" delay={1.5}>{"<api/>"}</FloatingTag>
+      {/* 2 minimal floating tags (CSS only) */}
+      <FloatingTag className="-top-2 left-6">{"</>"}</FloatingTag>
+      <FloatingTag className="-bottom-2 right-6">{"{ js }"}</FloatingTag>
     </div>
   );
 }
 
-function FloatingTag({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+function FloatingTag({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <div
-      className={`absolute glass rounded-xl px-3 py-1.5 font-mono text-xs text-primary shadow-glow ${className}`}
-      style={{ animation: `float-slow 5s ease-in-out infinite`, animationDelay: `${delay}s` }}
-    >
+    <div className={`absolute glass rounded-xl px-3 py-1.5 font-mono text-xs text-primary ${className}`}>
       {children}
     </div>
   );
