@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage, LANG_LABELS } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
-import logo from "@/assets/luitx-logo-new.jpg";
+import logo from "@/assets/luitx-logo-new.webp";
 
 const NAV_IDS = ["services", "about", "features", "contact"] as const;
 
@@ -40,7 +40,7 @@ export function Navbar() {
         >
           <a href="#top" className="flex items-center gap-2.5 group">
             <span className="relative h-11 w-11 rounded-xl grid place-items-center bg-background/60 ring-1 ring-primary/40 shadow-[0_0_18px_hsl(var(--primary)/0.35)] p-1.5 transition-transform duration-300 group-hover:scale-105">
-              <img src={logo} alt="LuitX logo" className="h-full w-full object-contain px-[2px] pb-0 pt-0 pl-0 pr-0 opacity-100 mx-0" loading="eager" />
+              <img src={logo} alt="LuitX logo" className="h-full w-full object-contain" decoding="async" />
             </span>
             <span className="font-display font-bold text-lg tracking-tight text-gradient">LuitX Solutions</span>
           </a>

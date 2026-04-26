@@ -1,6 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Reveal } from "./Reveal";
-import owner from "@/assets/owner.jpg";
+import owner from "@/assets/owner.webp";
 
 export function About() {
   const { t } = useLanguage();
@@ -52,7 +52,6 @@ function OwnerPortrait({ caption }: { caption: string }) {
           <img
             src={owner}
             alt="LuitX founder portrait"
-            loading="lazy"
             decoding="async"
             className="w-full h-full object-cover object-top"
           />

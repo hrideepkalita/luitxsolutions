@@ -1,6 +1,6 @@
 import { Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/luitx-logo-new.jpg";
+import logo from "@/assets/luitx-logo-new.webp";
 
 export function Footer() {
   const { t } = useLanguage();

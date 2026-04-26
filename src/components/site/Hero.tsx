@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowBigRight, MessageCircle, Sparkles } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/luitx-logo-new.jpg";
+import logo from "@/assets/luitx-logo-new.webp";
 
 const WHATSAPP_URL =
   "https://wa.me/918822821202?text=Hello%20LuitX%20Solutions%20%F0%9F%91%8B%F0%9F%8F%BB%20I%20need%20a%20website";
@@ -102,7 +102,6 @@ function HeroVisual() {
         <img
           src={logo}
           alt="LuitX — Build. Automate. Grow."
-          loading="eager"
           decoding="async"
           className="w-full h-full object-contain"
         />
