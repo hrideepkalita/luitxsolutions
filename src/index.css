@@ -87,10 +87,12 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
     background: var(--gradient-hero);
-    background-attachment: fixed;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+  @media (min-width: 769px) {
+    body { background-attachment: fixed; }
   }
   h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
