@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, Send, MessageCircle, MapPin } from "lucide-react";
+import { Phone, Mail, Send, MessageCircleQuestion, MapPin } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -42,7 +42,7 @@ export function Contact() {
       <div className="container">
         <Reveal className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-mono text-primary mb-4">
-            04 — CONTACT
+            ​
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">{t.contact.title}</h2>
           <p className="text-muted-foreground text-lg">{t.contact.subtitle}</p>
@@ -51,8 +51,8 @@ export function Contact() {
         <div className="grid lg:grid-cols-5 gap-8">
           <Reveal className="lg:col-span-2 space-y-4">
             <ContactCard icon={Phone} label={t.contact.phoneLabel} value="+91 88228 21202" href="tel:+918822821202" />
-            <ContactCard icon={Mail} label={t.contact.emailLabel} value="hello@luitx.com" href="mailto:hello@luitx.com" />
-            <ContactCard icon={MessageCircle} label="WhatsApp" value="Chat instantly" href={WHATSAPP_URL} external />
+            <ContactCard icon={Mail} label={t.contact.emailLabel} value="rangiavlog@gmail.com" href="mailto:rangiavlog@gmail.com" />
+            <ContactCard icon={MessageCircleQuestion} label="WhatsApp" value="Chat instantly" href={WHATSAPP_URL} external />
             <ContactCard icon={MapPin} label="Based in" value="Assam, India" />
           </Reveal>
 

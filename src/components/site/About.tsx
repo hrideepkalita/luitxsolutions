@@ -13,7 +13,7 @@ export function About() {
 
         <Reveal delay={120}>
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-mono text-primary mb-5">
-            ABOUT LUITX
+            About LuitX
           </div>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-5 text-gradient leading-tight">
             {t.owner.caption}

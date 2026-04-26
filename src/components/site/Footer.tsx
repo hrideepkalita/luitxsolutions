@@ -1,6 +1,6 @@
 import { Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/luitx-logo.jpg";
+import logo from "@/assets/luitx-logo-new.jpg";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -12,16 +12,16 @@ export function Footer() {
   ];
   return (
     <footer className="relative border-t border-border/40 mt-12">
-      <div className="container py-14">
+      <div className="container py-14 text-left">
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="relative h-10 w-10 rounded-xl overflow-hidden ring-1 ring-primary/40 shadow-glow">
-                <img src={logo} alt="LuitX logo" className="h-full w-full object-cover scale-[1.6]" />
+                <img src={logo} alt="LuitX logo" className="h-full w-full object-cover scale-[1.6] border-8" />
               </span>
-              <span className="font-bold text-lg text-gradient">LUITX</span>
+              <span className="font-bold text-lg text-gradient">LuitX Solutions</span>
             </div>
-            <p className="text-muted-foreground max-w-sm">{t.footer.tagline} — From Assam, For The World.</p>
+            <p className="text-muted-foreground max-w-sm text-justify">Build. Automate. Grow. <br />Made with ❤️by LuitX Solutions</p>
             <div className="flex gap-3 mt-5">
               {[Instagram, Facebook, Linkedin, Twitter].map((Icon, i) => (
                 <a
@@ -51,7 +51,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm font-mono uppercase tracking-wider text-muted-foreground">{t.footer.contact}</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="tel:+918822821202" className="hover:text-primary transition-colors">+91 88228 21202</a></li>
-              <li><a href="mailto:hello@luitx.com" className="hover:text-primary transition-colors">hello@luitx.com</a></li>
+              <li><a href="mailto:rangiavlog@gmail.com" className="hover:text-primary transition-colors">rangiavlog@gmail.com</a></li>
               <li>Assam, India</li>
             </ul>
           </div>

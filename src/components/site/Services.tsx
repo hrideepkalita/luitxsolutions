@@ -8,10 +8,10 @@ export function Services() {
   const { t } = useLanguage();
   return (
     <section id="services" className="relative py-24 md:py-32">
-      <div className="container">
+      <div className="container py-14 text-left">
         <Reveal className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-mono text-primary mb-4">
-            01 — SERVICES
+            ​
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">{t.services.title}</h2>
           <p className="text-muted-foreground text-lg">{t.services.subtitle}</p>
@@ -31,7 +31,7 @@ export function Services() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-gradient transition-all">{s.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
+                      <p className="text-muted-foreground leading-relaxed text-justify">{s.desc}</p>
                     </div>
                   </div>
                   <div className="mt-6 flex items-center gap-2 text-xs font-mono text-primary opacity-0 group-hover:opacity-100 transition-opacity">

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Rocket, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowBigRight, MessageCircle, Sparkles } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/luitx-logo.jpg";
+import logo from "@/assets/luitx-logo-new.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/918822821202?text=Hello%20LuitX%20Solutions%20%F0%9F%91%8B%F0%9F%8F%BB%20I%20need%20a%20website";
@@ -37,11 +37,11 @@ export function Hero() {
   const typed = useTyping(t.hero.typing);
 
   return (
-    <section id="top" className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-hidden">
+    <section id="top" className="relative py-24 md:py-0 overflow-hidden">
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-8">
-            <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-medium text-primary animate-fade-up">
+            <div className="inline-flex items-center gap-2 glass rounded-full py-1.5 font-mono text-primary mb-5 text-base text-left px-[356px] pt-0 pb-0 pl-[16px] pr-[16px] animate-fade-up">
               <Sparkles className="h-3.5 w-3.5" />
               <span className="font-mono">{t.hero.tagline}</span>
               <span className="text-muted-foreground">·</span>
@@ -49,7 +49,7 @@ export function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-fade-up" style={{ animationDelay: "100ms" }}>
-              <span className="block text-foreground">{t.hero.titleParts[0]}</span>
+              <span className="block text-foreground text-5xl font-sans mx-0 my-[10px] font-semibold">{t.hero.titleParts[0]}</span>
               <span className="block min-h-[1.1em]">
                 <span className="text-gradient-brand">{typed}</span>
                 <span className="inline-block w-[3px] h-[0.9em] align-middle bg-primary ml-1 animate-blink" />
@@ -62,11 +62,11 @@ export function Hero() {
 
             <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "300ms" }}>
               <a href="#contact" className="btn-glow group">
-                <Rocket className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <ArrowBigRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 {t.hero.ctaPrimary}
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost-glow">
-                <MessageCircle className="h-4 w-4" />
+                <ArrowBigRight className="h-4 w-4" />
                 {t.hero.ctaWhatsapp}
               </a>
             </div>
@@ -77,7 +77,7 @@ export function Hero() {
                   <div key={i} className="h-8 w-8 rounded-full border-2 border-background bg-gradient-primary shadow-glow" />
                 ))}
               </div>
-              <span>Trusted by ambitious businesses worldwide</span>
+              <span>Trusted by ambitious businesses locally</span>
             </div>
           </div>
 
