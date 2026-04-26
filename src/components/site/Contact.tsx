@@ -29,12 +29,15 @@ export function Contact() {
       return;
     }
     setSubmitting(true);
-    // Frontend-only for now (admin/backend coming next iteration)
+    const { name, email, phone, message } = parsed.data;
+    const text = `Hello LuitX 👋🏻,\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`;
+    const url = `https://wa.me/918822821202?text=${encodeURIComponent(text)}`;
     setTimeout(() => {
-      toast.success(t.contact.success);
+      window.open(url, "_blank", "noopener,noreferrer");
+      toast.success("Opening WhatsApp...");
       form.reset();
       setSubmitting(false);
-    }, 700);
+    }, 300);
   };
 
   return (
