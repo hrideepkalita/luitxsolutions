@@ -37,14 +37,14 @@ export function Hero() {
   const typed = useTyping(t.hero.typing);
 
   return (
-    <section id="top" className="relative py-24 md:py-0 overflow-hidden">
+    <section id="top" className="relative pt-28 md:pt-32 lg:pt-36 pb-20 md:pb-28 overflow-hidden">
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-8 pt-12 md:pt-20">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-fade-up" style={{ animationDelay: "100ms" }}>
-              <span className="block text-foreground text-5xl font-sans mx-0 my-[10px] font-semibold">{t.hero.titleParts[0]}</span>
+          <div className="lg:col-span-7 space-y-8">
+            <h1 className="font-bold leading-[1.05] tracking-tight animate-fade-up" style={{ animationDelay: "100ms" }}>
+              <span className="block text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-semibold mb-4 md:mb-6">{t.hero.titleParts[0]}</span>
               <span
-                className="block overflow-hidden leading-[1.1]"
+                className="block overflow-hidden leading-[1.1] text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                 style={{ minHeight: "2.2em" }}
                 aria-live="polite"
               >
