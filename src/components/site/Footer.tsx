@@ -21,7 +21,7 @@ export function Footer() {
               </span>
               <span className="font-bold text-lg text-gradient">LuitX Solutions</span>
             </div>
-            <p className="text-muted-foreground max-w-sm text-justify">Build. Automate. Grow. \n<br>Made with ❤️by LuitX Solutions</p>
+            <p className="text-muted-foreground max-w-sm text-justify">Build. Automate. Grow. <br />Made with ❤️by LuitX Solutions</p>
             <div className="flex gap-3 mt-5">
               {[Instagram, Facebook, Linkedin, Twitter].map((Icon, i) => (
                 <a
