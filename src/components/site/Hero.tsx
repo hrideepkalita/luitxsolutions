@@ -44,8 +44,8 @@ export function Hero() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-fade-up" style={{ animationDelay: "100ms" }}>
               <span className="block text-foreground text-5xl font-sans mx-0 my-[10px] font-semibold">{t.hero.titleParts[0]}</span>
               <span
-                className="block overflow-hidden whitespace-nowrap leading-[1.1] will-change-contents"
-                style={{ minHeight: "1.2em" }}
+                className="block overflow-hidden leading-[1.1]"
+                style={{ minHeight: "2.2em" }}
                 aria-live="polite"
               >
                 <span className="text-gradient-brand">{typed}</span>
