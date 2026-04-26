@@ -15,7 +15,9 @@ export function WhatsAppFab() {
       <MessageCircle className="h-6 w-6" />
       <style>{`
         @keyframes wa-pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55);} 70% { box-shadow: 0 0 0 14px rgba(37,211,102,0);} 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0);} }
-        .wa-pulse { animation: wa-pulse-ring 2.4s ease-out infinite; }
+        @media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+          .wa-pulse { animation: wa-pulse-ring 2.4s ease-out infinite; }
+        }
       `}</style>
     </a>
   );

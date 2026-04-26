@@ -3,12 +3,20 @@ import { useEffect, useState } from "react";
 export function ScrollProgress() {
   const [progress, setProgress] = useState(0);
   useEffect(() => {
-    const onScroll = () => {
+    let ticking = false;
+    const update = () => {
       const h = document.documentElement;
       const total = h.scrollHeight - h.clientHeight;
       setProgress(total > 0 ? (h.scrollTop / total) * 100 : 0);
+      ticking = false;
     };
-    onScroll();
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

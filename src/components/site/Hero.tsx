@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowBigRight, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowBigRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import logo from "@/assets/luitx-logo-new.webp";
 
