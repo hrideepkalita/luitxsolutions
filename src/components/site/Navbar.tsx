@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage, LANG_LABELS } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
-import logo from "@/assets/luitx-logo-new.jpg";
+import logo from "@/assets/luitx-logo-new.webp";
 
 const NAV_IDS = ["services", "about", "features", "contact"] as const;
 

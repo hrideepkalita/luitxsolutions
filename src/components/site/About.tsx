@@ -1,6 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Reveal } from "./Reveal";
-import owner from "@/assets/owner.jpg";
+import owner from "@/assets/owner.webp";
 
 export function About() {
   const { t } = useLanguage();
