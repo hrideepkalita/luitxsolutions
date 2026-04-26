@@ -11,7 +11,7 @@ export function Features() {
       <div className="container">
         <Reveal className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-mono text-primary mb-4">
-            03 — FEATURES
+            ​
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gradient">{t.features.title}</h2>
         </Reveal>

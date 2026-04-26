@@ -5,8 +5,8 @@ export const translations = {
     nav: { services: "Services", about: "About", features: "Features", contact: "Contact", cta: "Get Started" },
     hero: {
       tagline: "Build. Automate. Grow.",
-      sub: "From Assam, For The World.",
-      titleParts: ["Build Powerful", "Websites", "for Your Business"],
+      sub: "Made with ❤️by LuitX Solutions",
+      titleParts: ["Ready to dominate ?", "Websites", "for Your Business"],
       typing: ["Build Powerful Websites", "Automate Your Workflows", "Grow Your Brand Digitally"],
       desc: "We help businesses create high-performing websites, automate workflows, and grow digitally.",
       ctaPrimary: "🚀 Get Started",
@@ -52,6 +52,7 @@ export const translations = {
       title: "Let's build something amazing together!",
       desc: "Ready to bring your vision online? Start your project with LuitX today.",
       contact: "Contact Now", whatsapp: "WhatsApp Chat",
+      email: "rangiavlog@gmail.com",
     },
     footer: {
       tagline: "Build. Automate. Grow.",
