@@ -53,7 +53,6 @@ function OwnerPortrait({ caption }: { caption: string }) {
             src={owner}
             alt="LuitX founder portrait"
             decoding="async"
-            decoding="async"
             className="w-full h-full object-cover object-top"
           />
         </div>
