@@ -52,7 +52,7 @@ function OwnerPortrait({ caption }: { caption: string }) {
           <img
             src={owner}
             alt="LuitX founder portrait"
-            loading="lazy"
+            decoding="async"
             decoding="async"
             className="w-full h-full object-cover object-top"
           />

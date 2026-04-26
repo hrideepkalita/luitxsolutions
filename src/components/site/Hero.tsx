@@ -102,7 +102,6 @@ function HeroVisual() {
         <img
           src={logo}
           alt="LuitX — Build. Automate. Grow."
-          loading="eager"
           decoding="async"
           className="w-full h-full object-contain"
         />
