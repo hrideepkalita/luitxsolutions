@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowBigRight, Sparkles } from "lucide-react";
+import { ArrowBigRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import logo from "@/assets/luitx-logo-new.webp";
 
@@ -40,14 +40,7 @@ export function Hero() {
     <section id="top" className="relative py-24 md:py-0 overflow-hidden">
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-8">
-            <div className="inline-flex items-center gap-2 glass rounded-full py-1.5 font-mono text-primary mb-5 text-base text-left px-[356px] pt-0 pb-0 pl-[16px] pr-[16px] animate-fade-up">
-              <Sparkles className="h-3.5 w-3.5" />
-              <span className="font-mono">{t.hero.tagline}</span>
-              <span className="text-muted-foreground">·</span>
-              <span className="text-muted-foreground">{t.hero.sub}</span>
-            </div>
-
+          <div className="lg:col-span-7 space-y-8 pt-12 md:pt-20">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight animate-fade-up" style={{ animationDelay: "100ms" }}>
               <span className="block text-foreground text-5xl font-sans mx-0 my-[10px] font-semibold">{t.hero.titleParts[0]}</span>
               <span className="block min-h-[1.1em]">
