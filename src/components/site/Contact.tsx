@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, Send, MessageCircleQuestionMark, MapPin } from "lucide-react";
+import { Phone, Mail, Send, MessageCircleQuestion, MapPin } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -52,7 +52,7 @@ export function Contact() {
           <Reveal className="lg:col-span-2 space-y-4">
             <ContactCard icon={Phone} label={t.contact.phoneLabel} value="+91 88228 21202" href="tel:+918822821202" />
             <ContactCard icon={Mail} label={t.contact.emailLabel} value="rangiavlog@gmail.com" href="mailto:rangiavlog@gmail.com" />
-            <ContactCard icon={MessageCircleQuestionMark} label="WhatsApp" value="Chat instantly" href={WHATSAPP_URL} external />
+            <ContactCard icon={MessageCircleQuestion} label="WhatsApp" value="Chat instantly" href={WHATSAPP_URL} external />
             <ContactCard icon={MapPin} label="Based in" value="Assam, India" />
           </Reveal>
 
