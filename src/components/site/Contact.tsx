@@ -4,6 +4,7 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Reveal } from "./Reveal";
+import { supabase } from "@/integrations/supabase/client";
 
 const WHATSAPP_URL =
   "https://wa.me/918822821202?text=Hello%20LuitX%20Solutions%20%F0%9F%91%8B%F0%9F%8F%BB%20I%20need%20a%20website";
@@ -30,6 +31,12 @@ export function Contact() {
     }
     setSubmitting(true);
     const { name, email, phone, message } = parsed.data;
+
+    // Save to admin inbox (fire-and-forget)
+    supabase.from("messages").insert({ name, email, phone, message }).then(({ error }) => {
+      if (error) console.warn("Message save failed:", error.message);
+    });
+
     const text = `Hello LuitX 👋🏻,\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`;
     const url = `https://wa.me/918822821202?text=${encodeURIComponent(text)}`;
     setTimeout(() => {

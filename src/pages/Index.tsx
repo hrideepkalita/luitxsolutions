@@ -13,6 +13,9 @@ import { CtaSection } from "@/components/site/CtaSection";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { MobileStickyCta } from "@/components/site/MobileStickyCta";
+import { ProjectsCarousel } from "@/components/site/ProjectsCarousel";
+import { Testimonials } from "@/components/site/Testimonials";
+import { supabase } from "@/integrations/supabase/client";
 
 const Index = () => {
   useEffect(() => {
@@ -34,7 +37,6 @@ const Index = () => {
     setMeta("og:description", "Premium websites, landing pages & automation. From Assam, For The World.", "property");
     setMeta("og:type", "website", "property");
 
-    // Canonical
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!link) {
       link = document.createElement("link");
@@ -43,7 +45,6 @@ const Index = () => {
     }
     link.href = window.location.origin + "/";
 
-    // JSON-LD
     const ldId = "luitx-jsonld";
     document.getElementById(ldId)?.remove();
     const script = document.createElement("script");
@@ -61,6 +62,23 @@ const Index = () => {
       slogan: "Build. Automate. Grow.",
     });
     document.head.appendChild(script);
+
+    // Visitor tracking (once per session)
+    const key = "luitx_visit_logged";
+    if (!sessionStorage.getItem(key)) {
+      sessionStorage.setItem(key, "1");
+      supabase.from("visitors").insert({
+        path: window.location.pathname,
+        referrer: document.referrer || null,
+        user_agent: navigator.userAgent.slice(0, 200),
+      }).then(() => {}, () => {});
+    }
+
+    // Override title/description from settings if present
+    supabase.from("site_settings").select("site_title,meta_description").eq("id", 1).maybeSingle().then(({ data }) => {
+      if (data?.site_title) document.title = data.site_title;
+      if (data?.meta_description) setMeta("description", data.meta_description);
+    }, () => {});
   }, []);
 
   return (
@@ -72,8 +90,10 @@ const Index = () => {
         <Hero />
         <UspStrip />
         <Services />
+        <ProjectsCarousel />
         <About />
         <Features />
+        <Testimonials />
         <CtaSection />
         <Contact />
       </main>
