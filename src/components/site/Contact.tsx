@@ -60,8 +60,8 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-5 gap-8">
           <Reveal className="lg:col-span-2 space-y-4">
-            <ContactCard icon={Phone} label={t.contact.phoneLabel} value="+91 88228 21202" href="tel:+918099991202" />
-            <ContactCard icon={Mail} label={t.contact.emailLabel} value="rangiavlog@gmail.com" href="mailto:luitxsolutions@gmail.com" />
+            <ContactCard icon={Phone} label={t.contact.phoneLabel} value="+91 8099991202" href="tel:+918099991202" />
+            <ContactCard icon={Mail} label={t.contact.emailLabel} value="luitxsolutions@gmail.com" href="mailto:luitxsolutions@gmail.com" />
             <ContactCard icon={MessageCircleQuestion} label="WhatsApp" value="Chat instantly" href={WHATSAPP_URL} external />
             <ContactCard icon={MapPin} label="Based in" value="Assam, India" />
           </Reveal>
