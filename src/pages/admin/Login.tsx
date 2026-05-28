@@ -32,7 +32,7 @@ export default function AdminLogin() {
         return;
       }
       const fn = mode === "signup" ? signUp : signIn;
-      const { error } = await fn(email, password);
+      const { error, isAdmin: signedInAdmin } = await fn(email, password);
       if (error) {
         toast.error(error);
         return;
@@ -40,6 +40,8 @@ export default function AdminLogin() {
       if (remember) localStorage.setItem("luitx_remember_email", email);
       else localStorage.removeItem("luitx_remember_email");
       toast.success(mode === "signup" ? "Account created!" : "Welcome back");
+      if (signedInAdmin) nav("/admin", { replace: true });
+      else if (mode === "login") toast.error("This account is signed in, but it is not an admin account.");
     } finally {
       setBusy(false);
     }
